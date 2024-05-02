@@ -1,70 +1,126 @@
-# Getting Started with Create React App
+In this project, let's build an Appointments App by applying the concepts we have learned till now.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Refer to the image below:
 
-## Available Scripts
+![image](https://github.com/bukka5sandhya/React-Js-Appointments-App/assets/133884532/bcd706fe-3994-47ce-a8f5-de7381882780)
 
-In the project directory, you can run:
+https://assets.ccbp.in/frontend/content/react-js/appointments-app-output.gif
 
-### `npm start`
+Design Files
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Click to view
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Extra Small (Size < 576px) and Small (Size >= 576px)
 
-### `npm test`
+Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Set Up Instructions
 
-### `npm run build`
+Click to view
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Download dependencies by running npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Start up the app using npm start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Completion Instructions
 
-### `npm run eject`
+Functionality to be added
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The app must have the following functionalities
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Initially, the list of appointments should be empty and the title input and date input should be empty
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+When non-empty values are provided for title and date and the Add button is clicked,
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+A new appointment should be added to the list of appointments
 
-## Learn More
+The value inside the input elements for title and date should be updated to their initial values
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+When the Star on an appointment is clicked, the appointment should be starred
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The status of the Starred filter is updated by clicking on it
 
-### Code Splitting
+When the Starred filter is active, all the starred appointments should be filtered and displayed
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+When the Starred filter is inactive, the list of all appointments should be displayed
 
-### Analyzing the Bundle Size
+Components Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![image](https://github.com/bukka5sandhya/React-Js-Appointments-App/assets/133884532/3ffa3d07-fc67-4f22-befa-5ed2bccd629c)
 
-### Making a Progressive Web App
+Implementation Files
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Use these files to complete the implementation:
 
-### Advanced Configuration
+src/components/Appointments/index.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+src/components/Appointments/index.css
 
-### Deployment
+src/components/AppointmentItem/index.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+src/components/AppointmentItem/index.css
 
-### `npm run build` fails to minify
+Quick Tips
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Click to view
+
+<input type="date" />
+
+The format function in the date-fns package can be used to get the formatted date string in the given format
+
+
+import {format} from 'date-fns'
+
+console.log(format(new Date(2021, 19, 07), 'dd MMMM yyyy, EEEE')) // 19 July 2021, Monday
+
+Important Note
+
+Click to view
+
+The following instructions are required for the tests to pass
+
+For the format function, pass the format string dd MMMM yyyy, EEEE as the second argument
+
+The star button in each appointment should have the data-testid as star
+
+The star image in each appointment should have alt as star
+
+Resources
+
+Image URLs
+
+https://assets.ccbp.in/frontend/react-js/appointments-app/appointments-img.png alt should be appointments
+
+https://assets.ccbp.in/frontend/react-js/appointments-app/star-img.png
+
+https://assets.ccbp.in/frontend/react-js/appointments-app/filled-star-img.png
+
+Colors
+
+Hex: #9796f0
+
+Hex: #fbc7d4
+
+Hex: #ffffff
+
+Hex: #171f46
+
+Hex: #8b5cf6
+
+Hex: #b5b7c4
+
+Hex: #9897f0
+
+Font-families
+
+Things to Keep in Mind
+
+All components you implement should go in the src/components directory.
+
+Don't change the component folder names as those are the files being imported into the tests.
+
+Do not remove the pre-filled code
+
+Want to quickly review some of the concepts you’ve been learning? Take a look at the Cheat Sheets.
+
+The HTML input element with the type date is designed for the user to select the date from a date picker
